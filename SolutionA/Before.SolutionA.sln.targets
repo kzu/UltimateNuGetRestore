@@ -6,6 +6,10 @@
 		<RestoreSolution Include="..\External\ExternalA\ExternalA.sln" />
 	</ItemGroup>
 
-	<Import Project="..\NuGet.Restore.targets" />
+	<PropertyGroup>
+		<RestoreDir>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), NuGet.Restore.targets).TrimEnd("\").TrimEnd("/"))</RestoreDir>
+	</PropertyGroup>
+
+	<Import Project="$(RestoreDir)\NuGet.Restore.targets" />
 
 </Project>
