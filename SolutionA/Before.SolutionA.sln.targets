@@ -3,7 +3,9 @@
 
 	<ItemGroup>
 		<RestoreSolution Include="Nested\ProjectB.sln" />
-		<RestoreSolution Include="..\External\ExternalA\ExternalA.sln" />
+		<RestoreSolution Include="..\External\ExternalA\ExternalA.sln">
+			<OutputDirectory>..\External\ExternalA\packages</OutputDirectory>
+		</RestoreSolution>
 	</ItemGroup>
 
 	<PropertyGroup>
