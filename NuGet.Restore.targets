@@ -12,8 +12,10 @@
 	</PropertyGroup>
 
 	<Target Name="RestorePackages" BeforeTargets="Build" DependsOnTargets="GetNuGet">
+		<!-- Restores current solution being build first -->
 		<Exec Command="&quot;$(NuGetExe)&quot; Restore &quot;$(SolutionPath)&quot;" Condition="'$(SolutionPath)' != ''" />
-		<Exec Command="&quot;$(NuGetExe)&quot; Restore &quot;%(Solution.Identity)&quot;" Condition="'%(Solution.Identity)' != ''" />
+		<!-- Restores additional solutions  -->
+		<Exec Command="&quot;$(NuGetExe)&quot; Restore &quot;%(RestoreSolution.Identity)&quot;" Condition="'%(RestoreSolution.Identity)' != ''" />
 	</Target>
 
 	<Target Name="GetNuGet" Condition="'$(OS)' == 'Windows_NT' And !Exists('$(NuGetExe)')">

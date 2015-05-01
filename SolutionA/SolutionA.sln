@@ -1,7 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectA", "ProjectA\ProjectA.csproj", "{BBBFF9E4-B242-4B89-B2A8-60857A40CA49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectB", "Nested\ProjectB\ProjectB.csproj", "{DBE7752E-5320-4CAE-B33A-88032D70A36A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalA", "..\External\ExternalA\ExternalA\ExternalA.csproj", "{4D259FAA-BF86-4E33-A364-4407702FD6C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +19,16 @@ Global
 		{BBBFF9E4-B242-4B89-B2A8-60857A40CA49}.Debug|x86.Build.0 = Debug|x86
 		{BBBFF9E4-B242-4B89-B2A8-60857A40CA49}.Release|x86.ActiveCfg = Release|x86
 		{BBBFF9E4-B242-4B89-B2A8-60857A40CA49}.Release|x86.Build.0 = Release|x86
+		{DBE7752E-5320-4CAE-B33A-88032D70A36A}.Debug|x86.ActiveCfg = Debug|x86
+		{DBE7752E-5320-4CAE-B33A-88032D70A36A}.Debug|x86.Build.0 = Debug|x86
+		{DBE7752E-5320-4CAE-B33A-88032D70A36A}.Release|x86.ActiveCfg = Release|x86
+		{DBE7752E-5320-4CAE-B33A-88032D70A36A}.Release|x86.Build.0 = Release|x86
+		{4D259FAA-BF86-4E33-A364-4407702FD6C6}.Debug|x86.ActiveCfg = Debug|x86
+		{4D259FAA-BF86-4E33-A364-4407702FD6C6}.Debug|x86.Build.0 = Debug|x86
+		{4D259FAA-BF86-4E33-A364-4407702FD6C6}.Release|x86.ActiveCfg = Release|x86
+		{4D259FAA-BF86-4E33-A364-4407702FD6C6}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
