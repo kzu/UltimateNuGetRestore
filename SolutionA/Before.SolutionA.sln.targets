@@ -6,6 +6,11 @@
 		<RestoreSolution Include="..\External\ExternalA\ExternalA.sln">
 			<OutputDirectory>..\External\ExternalA\packages</OutputDirectory>
 		</RestoreSolution>
+
+		<!-- Alternatively, restore all top-level external solutions. -->
+		<RestoreSolution Include="External\**\*.sln" Exclude="External\**\external\**\*.sln">
+			<OutputDirectory>External\%(RecursiveDir).</OutputDirectory>
+		</RestoreSolution>
 	</ItemGroup>
 
 	<PropertyGroup>
